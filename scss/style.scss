@@ -1535,47 +1535,38 @@ textarea.form-control {
 }
 
 .block-3 {
-	.image {
+	.image{
 		width: 100%;
 		padding: 10% 7%;
-
 		@include media-breakpoint-up(md) {
 			width: 40%;
-			height: fit-content;
-			//padding: 10% 7%;
+			padding: 10% 7%;	
 		}
-
-		.icon {
+		.icon{
 			width: 100px;
 			height: 100px;
 			background: $primary;
 			@include border-radius(50%);
 			@include transition(.3s);
-
-			span {
+			span{
 				color: $white;
 			}
-
-			opacity: 0;
+			opacity: 0;			
 		}
-
-		&:hover {
-			.icon {
+		&:hover{
+			.icon{
 				opacity: 1;
 			}
 		}
 	}
-
 	.text {
 		width: 100%;
 		padding: 10% 7%;
-
 		@include media-breakpoint-up(md) {
 			width: 60%;
-			padding: 10% 7%;
+			padding: 10% 7%;	
 		}
 	}
-
 	.text {
 		.subheading {
 			font-size: 13px;
@@ -1583,28 +1574,23 @@ textarea.form-control {
 			letter-spacing: .1em;
 			color: darken($white,45%);
 		}
-
 		.heading {
 			font-size: 30px;
 			margin-bottom: 30px;
-
-			a {
+			a{
 				color: $white;
 			}
 		}
-
 		p {
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
 	}
-
 	.image {
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
-
 		@include media-breakpoint-down(sm) {
 			height: 300px;
 		}
