@@ -88,6 +88,7 @@
                   <h2 class="mb-3 mt-5">Ask</h2>
                   <p>As part of the marketing analyst team, it is my responsibilty to find how annual members and casual riders use Cyclistic different.</p>
                   <h2 class="mb-3 mt-5">Prepare</h2>
+                  <p><a href="cyclistic.html">CYCLYSTIC</a></p>
                   <p>I downloaded Cyclistic's historical trip data for the past 12 months from <a href="https://divvy-tripdata.s3.amazonaws.com/index.html">here</a> and saved it to a local folder named <a href=#>cyclistic_bike_share</a> along with the Jupyter Notebook where all my analysis is. The files are organized by year and then by date.</p>
                   <p>Since Cyclstic is a fictional company we are using data that has been made available by Motivate Internationl Inc. under this <a href="https://ride.divvybikes.com/data-license-agreement">license</a></p>
                   <p>The data is non-biased and credible. The data is reliable, original, comprehensive, current, and cited.</p>
@@ -101,9 +102,14 @@
                   <p>For my analysis I will be using Python inside a Jupyter Notebook in order to keep my code organized and keep track of any data cleaning that is necessary.
                      With Python I can use the Pandas library which is great when working with a big amount of data, therefore it has no issue with the 5.7M entries from the past year.</p>
                   <p>For visualizations, I will create a dashboard on Tableau.</p>
-                  <p>I took several steps to check for data integrity. I confirmed the data was complete and that there was no duplicates. 
+                  <p>I took several steps to clean the data. I confirmed the data was complete and that there was no duplicates. 
                      I checked for the data types for each column and noticed several were object data types instead of strings and converted them appropriately.
-                     The date columns were also objects and had to be converted to datetime.
+                     The date columns were also objects and had to be converted to datetime. Overall, there was 5.7M entries for the past year and around 1.3M had missing data.
+                     I decided to drop the rows with missing data since I would still be left with a large sample size of 4.4M.
+                  </p>
+                  <p>
+                      In order to prepare my data for analysis I added two more columns: ride_length and day_of_week. 
+                      Ride_length calculates how long the ride was and day_of_week calculates which day of the week the ride started.
                   </p>
               </div> <!-- .col-md-8 -->
 
