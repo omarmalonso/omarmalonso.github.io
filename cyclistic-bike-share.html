@@ -84,43 +84,75 @@
                   <p>
                       The following case study is part of Google's Data Analytics Capstone. Although the case study was provided by Google all of the work shown
                       is my own.
-                      In this case study, I am a junior data analyst working in the marketing analyst team for Cyclistic, a bike share company in Chicago. 
-                      Cyclistic's bike-share program features 5,800 bicycles and 600 docking stations. Their pricing plans are single-ride, full-day pass, and 
-                      annual memberships. Casual riders includes customers who purchase single-ride or full-day passes and annual members are customers with 
-                      annual memberships. Liliy Moreno, the director of marketing, believes that the key to future growth depends on maximizing the number of 
+                      In this case study, I am a junior data analyst working in the marketing analyst team for Cyclistic, a bike share company in Chicago.
+                      Cyclistic's bike-share program features 5,800 bicycles and 600 docking stations. Their pricing plans are single-ride, full-day pass, and
+                      annual memberships. Casual riders includes customers who purchase single-ride or full-day passes and annual members are customers with
+                      annual memberships. Liliy Moreno, the director of marketing, believes that the key to future growth depends on maximizing the number of
                       annual memberships.
                   </p>
                   <p>
                       <img src="images/cyclistic-logo.jpg" alt="" class="img-fluid">
                   </p>
                   <h2 class="mb-3 mt-5">Ask</h2>
-                  <p>Cyclistic's marketing team wants to know why a casual rider would want to purchase an annual membership. As the team's junior analyst, it is my 
-                        responsibilty to find how annual members and casual riders use Cyclistic different
+                  <p>
+                      Cyclistic's marketing team wants to know why a casual rider would want to purchase an annual membership. As the team's junior analyst, it is my
+                      responsibilty to find how annual members and casual riders use Cyclistic different
                   </p>
                   <h2 class="mb-3 mt-5">Prepare</h2>
-                  <p>I downloaded Cyclistic's historical trip data for the past 12 months from <a href="https://divvy-tripdata.s3.amazonaws.com/index.html">here</a> and 
-                        saved it to a local folder named <a href=#>cyclistic_bike_share</a> along with the Jupyter Notebook where all my analysis is. The files are 
-                        organized by year and then by date.
+                  <p>
+                      I downloaded Cyclistic's historical trip data for the past 12 months from <a href="https://divvy-tripdata.s3.amazonaws.com/index.html">here</a> and
+                      saved it to a local folder named <a href=#>cyclistic_bike_share</a> along with the Jupyter Notebook where all my analysis is. The files are
+                      organized by year and then by date.
                   </p>
                   <p>Since Cyclstic is a fictional company we are using data that has been made available by Motivate Internationl Inc. under this <a href="https://ride.divvybikes.com/data-license-agreement">license</a></p>
-                  <p>The data is unbiased and credible. The data is original, comprehensive, current, and cited. It is questionable whether the 
-                        data is reliable due to some rides having end times that are before their start times. That was dealt with during the 
-                        “Process” part of the data analytics life cycle. 
+                  <p>
+                      The data is unbiased and credible. The data is original, comprehensive, current, and cited. It is questionable whether the
+                      data is reliable due to some rides having end times that are before their start times. That was dealt with during the
+                      “Process” part of the data analytics life cycle.
                   </p>
-                 
+
                   <h2 class="mb-3 mt-5">Process</h2>
-                  <p>For my analysis I will be using Python inside a Jupyter Notebook in order to keep my code organized and keep track of any data cleaning that is necessary.
-                     With Python I can use the Pandas library which is great when working with a big amount of data, therefore it has no issue with the 5.7M entries from the past year.</p>
+                  <p>
+                      For my analysis I will be using Python inside a Jupyter Notebook in order to keep my code organized and keep track of any data cleaning that is necessary.
+                  </p>
                   <p>For visualizations, I will create a dashboard on Tableau.</p>
-                  <p>I took several steps to clean the data. I confirmed the data was complete and that there was no duplicates. 
-                     I checked for the data types for each column and noticed several were object data types instead of strings and converted them appropriately.
-                     The date columns were also objects and had to be converted to datetime. Overall, there was 5.7M entries for the past year and around 1.3M had missing data.
-                     I decided to drop the rows with missing data since I would still be left with a large sample size of 4.4M.
+                  <p>
+                      I took several steps to clean the data. First, I dropped columns I was not going to use in my analysis and converted data types for columns to their correct types. To proceed with the cleaning process I confirmed the data was complete and that there were no duplicates. The data started with 5.7 million(M) total entries, of which one-fifth of them had missing values and were dropped, leaving 4.4M entries.
                   </p>
                   <p>
-                      In order to prepare my data for analysis I added two more columns: ride_length and day_of_week. 
-                      Ride_length calculates how long the ride was and day_of_week calculates which day of the week the ride started.
+                      In order to prepare my data for analysis I added two more columns: ride_length, day_of_week, starting_hour and month. With ride_length I was able to validate all of the rides. I dropped any rows that had a ride length that was negative or equal to zero.
                   </p>
+                  <p>Next I found all the outliers and removed them, clearing the way for data analysis. </p>
+
+                  <h2 class="mb-3 mt-5">Analyze</h2>
+                  <p>
+                      After analyzing the data I was able to start understanding how annual members and casual riders were different.
+                  </p>
+                  <p>
+                      (insert code and data frame)
+                      On average, casual riders ride for 3 minutes longer than annual members.
+
+                  </p>
+                  <p>
+                      (insert code and data frame)
+                      Both casual riders and annual members ride longer on Saturdays than any other day.
+                      The amount of total rides per day are almost exactly opposite between casual riders and annual members. Casual riders’ highest total per day is on Saturdays and their lowest is on  Tuesdays.  When it comes to annual riders, their highest total is on Tuesdays but their lowest is on Sundays. By taking a closer look at the above data frame we can see that overall annual members prefer to ride during the week and casual riders prefer to ride on the weekends.
+                  </p>
+                  <p>
+                      The most popular time for both types of customers to start a ride is at 5 p.m. The most popular month to ride for casual members and annual members is July and August respectively.
+                  </p>
+                  <h2 class="mb-3 mt-5">Share</h2>
+                  <h2 class="mb-3 mt-5">Act</h2>
+                  <p>
+                      The majority of Cyclistic users already have annual memberships, making up more than 60% of all riders. Our goal is to increase this percent even more. By highlighting the differences between casual riders and annual members, my analysis and visualizations give insight into how we could achieve this. The data shows us the two customer types differ in how they use Cyclistic services.
+                  </p>
+                  <p>
+                      Casual riders ride for longer than annual members. Casual riders also seem to prefer weekends over weekdays, whereas their counterparts prefer to ride during the week vs on the weekends.
+                      We can also retrieve a lot of information by noting when customers are more likely to ride. On an hour-to-hour basis, both customer types have similar trends. Total rides for both types rise from 4 a.m. to 5 p.m. and fall from there. Also, both types have peaks
+                      at 8 a.m.
+
+                  </p>
+
               </div> <!-- .col-md-8 -->
 
           </div>
