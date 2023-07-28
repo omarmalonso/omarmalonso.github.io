@@ -150,6 +150,8 @@
                   <p>
                       I took several steps to clean the data. First, I dropped columns I was not going to use in my analysis and converted data types for columns to their correct types. To proceed with the cleaning process I confirmed the data was complete and that there were no duplicates. The data started with 5.7 million(M) total entries, of which one-fifth of them had missing values and were dropped, leaving 4.4M entries.
                   </p>
+                  <br />
+                  <h4 class="subheading">Validating Ride Lengths</h4>
                   <script src="https://gist.github.com/omarmalonso/4a4634ddbe8f00b8c8242c9998659a24.js"></script>
                   <p>
                       In order to prepare my data for analysis I added two more columns: ride_length, day_of_week, starting_hour and month. With ride_length I was able to validate all of the rides. I dropped any rows that had a ride length that was negative or equal to zero.
@@ -161,7 +163,7 @@
                       After analyzing the data I was able to start understanding how annual members and casual riders were different.
                   </p>
                   <br />
-                  <h4 class="subheading">Average ride length</h4>
+                  <h4 class="subheading">Average Ride Length</h4>
                   <table border="1" class="dataframe">
                       <thead>
                           <tr>
@@ -182,7 +184,7 @@
                   </table>
                   <p>On average, casual riders ride for 3 minutes longer than annual members.</p>
                   <br />
-                  <h4 class="subheading">Daily total rides and average ride length by Membership </h4>
+                  <h4 class="subheading">Daily Total Rides and Ride Length by Membership </h4>
                   <script src="https://gist.github.com/omarmalonso/6d78827f1d593788f37d237c44574ffd.js"></script>
                   <table border="1" class="dataframe">
                       <thead>
