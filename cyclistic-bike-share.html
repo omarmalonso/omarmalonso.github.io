@@ -119,6 +119,7 @@
                   <p>
                       I took several steps to clean the data. First, I dropped columns I was not going to use in my analysis and converted data types for columns to their correct types. To proceed with the cleaning process I confirmed the data was complete and that there were no duplicates. The data started with 5.7 million(M) total entries, of which one-fifth of them had missing values and were dropped, leaving 4.4M entries.
                   </p>
+                  <script src="https://gist.github.com/omarmalonso/4a4634ddbe8f00b8c8242c9998659a24.js"></script>
                   <p>
                       In order to prepare my data for analysis I added two more columns: ride_length, day_of_week, starting_hour and month. With ride_length I was able to validate all of the rides. I dropped any rows that had a ride length that was negative or equal to zero.
                   </p>
@@ -128,7 +129,7 @@
                   <p>
                       After analyzing the data I was able to start understanding how annual members and casual riders were different.
                   </p>
-              <p></p>
+                  <p></p>
                   <table border="1" class="dataframe">
                       <thead>
                           <tr>
@@ -148,9 +149,104 @@
                       </tbody>
                   </table>
                   <p>On average, casual riders ride for 3 minutes longer than annual members.</p>
-              <p></p>
+                  <p></p>
+                  <script src="https://gist.github.com/omarmalonso/6d78827f1d593788f37d237c44574ffd.js"></script>
+                  <table border="1" class="dataframe">
+                      <thead>
+                          <tr style="text-align: right;">
+                              <th></th>
+                              <th></th>
+                              <th>member_casual</th>
+                              <th>ride_length</th>
+                          </tr>
+                          <tr>
+                              <th>day_of_week</th>
+                              <th>member_casual</th>
+                              <th></th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th rowspan="2" valign="top">Monday</th>
+                              <th>casual</th>
+                              <td>180269</td>
+                              <td>13.688929</td>
+                          </tr>
+                          <tr>
+                              <th>member</th>
+                              <td>372255</td>
+                              <td>10.526468</td>
+                          </tr>
+                          <tr>
+                              <th rowspan="2" valign="top">Tuesday</th>
+                              <th>casual</th>
+                              <td>176564</td>
+                              <td>12.877990</td>
+                          </tr>
+                          <tr>
+                              <th>member</th>
+                              <td>414319</td>
+                              <td>10.471070</td>
+                          </tr>
+                          <tr>
+                              <th rowspan="2" valign="top">Wednesday</th>
+                              <th>casual</th>
+                              <td>184040</td>
+                              <td>12.877672</td>
+                          </tr>
+                          <tr>
+                              <th>member</th>
+                              <td>412198</td>
+                              <td>10.570522</td>
+                          </tr>
+                          <tr>
+                              <th rowspan="2" valign="top">Thursday</th>
+                              <th>casual</th>
+                              <td>205265</td>
+                              <td>13.058479</td>
+                          </tr>
+                          <tr>
+                              <th>member</th>
+                              <td>411853</td>
+                              <td>10.641465</td>
+                          </tr>
+                          <tr>
+                              <th rowspan="2" valign="top">Friday</th>
+                              <th>casual</th>
+                              <td>219248</td>
+                              <td>13.601802</td>
+                          </tr>
+                          <tr>
+                              <th>member</th>
+                              <td>356501</td>
+                              <td>10.669286</td>
+                          </tr>
+                          <tr>
+                              <th rowspan="2" valign="top">Saturday</th>
+                              <th>casual</th>
+                              <td>304132</td>
+                              <td>14.984771</td>
+                          </tr>
+                          <tr>
+                              <th>member</th>
+                              <td>326480</td>
+                              <td>11.765116</td>
+                          </tr>
+                          <tr>
+                              <th rowspan="2" valign="top">Sunday</th>
+                              <th>casual</th>
+                              <td>249871</td>
+                              <td>14.937968</td>
+                          </tr>
+                          <tr>
+                              <th>member</th>
+                              <td>289559</td>
+                              <td>11.609023</td>
+                          </tr>
+                      </tbody>
+                  </table>
                   <p>
-                      (insert code and data frame)
                       Both casual riders and annual members ride longer on Saturdays than any other day.
                       The amount of total rides per day are almost exactly opposite between casual riders and annual members. Casual riders’ highest total per day is on Saturdays and their lowest is on  Tuesdays.  When it comes to annual riders, their highest total is on Tuesdays but their lowest is on Sundays. By taking a closer look at the above data frame we can see that overall annual members prefer to ride during the week and casual riders prefer to ride on the weekends.
                   </p>
